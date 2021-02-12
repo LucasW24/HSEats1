@@ -5,6 +5,7 @@ import axios from 'axios';
 import Loading from './components/Loading';
 
 import Home from './views/Home';
+import Splash from './views/Splash';
 
 import AuthContext from './auth/AuthContext';
 import Login from './auth/Login';
@@ -15,12 +16,13 @@ import ResetPassword from './auth/ResetPassword';
 import Settings from './auth/Settings';
 
 import './App.css';
+import Inputs from './views/Inputs';
 
 const App = () => {
   const [auth, setAuth] = useState({isAuth: false, loading: true, fetched: false})
 
   useEffect(() => {
-    document.title = "HSEates"
+    document.title = "HSEats"
 
     if (!auth.user && !auth.fetched){
       console.log('test token')
@@ -74,8 +76,11 @@ const App = () => {
           <Route exact path="/login" component={Login}/>
           <Route exact path="/signup" component={Signup}/>
           <Route exact path="/settings" component={Settings}/>
+          <Route exact path="/splash" component={Splash}/>
+          <Route exact path="/inputs" component={Inputs}/>
 
           {/* general routes */}
+          {/* <Route exact path="/" component={Splash}/> */}
           <Route exact path="/" component={Home}/>
           
           {auth.user?.role === "teacher"?
@@ -86,7 +91,10 @@ const App = () => {
             <div>
               {auth.user?.role === "student"?
                 <div>
-                  {/* student routes */}
+                  {
+                  /* student routes */
+                  
+                  }
                 </div>
               :
                 <div>
