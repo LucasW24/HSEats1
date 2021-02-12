@@ -32,7 +32,11 @@ const Inputs = () => {
                 <InputHot></InputHot>
                 </div>
                 
-                
+                <div>
+                {/* <Link to="/inputs"> */}
+                <Button type="primary" style = {{borderRadius: "25px",height:"40px" , width: "10vh ",margin: "30px 0px 15px 10vh"}}>Next</Button>
+                {/* </Link> */}
+                </div>
             </div>
             
         </div>
