@@ -17,6 +17,7 @@ import Settings from './auth/Settings';
 
 import './App.css';
 import Inputs from './views/Inputs';
+import Order from './views/Order';
 
 const App = () => {
   const [auth, setAuth] = useState({isAuth: false, loading: true, fetched: false})
@@ -78,6 +79,7 @@ const App = () => {
           <Route exact path="/settings" component={Settings}/>
           <Route exact path="/splash" component={Splash}/>
           <Route exact path="/inputs" component={Inputs}/>
+          <Route exact path="/order" component={Order}/>
 
           {/* general routes */}
           {/* <Route exact path="/" component={Splash}/> */}

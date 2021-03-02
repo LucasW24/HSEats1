@@ -1,6 +1,7 @@
 import React, {useState, useEffect, useContext} from 'react'
 import {Button, Timeline}from 'antd'
 import AuthContext from '../auth/AuthContext.js'
+import { Link } from "react-router-dom";
 
 import Navbar from '../components/Navbar';
 import Loading from '../components/Loading';
@@ -33,9 +34,9 @@ const Inputs = () => {
                 </div>
                 
                 <div>
-                {/* <Link to="/inputs"> */}
+                <Link to="/order">
                 <Button type="primary" style = {{borderRadius: "25px",height:"40px" , width: "10vh ",margin: "30px 0px 15px 10vh"}}>Next</Button>
-                {/* </Link> */}
+                </Link>
                 </div>
             </div>
             
